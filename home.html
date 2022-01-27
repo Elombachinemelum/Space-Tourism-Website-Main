@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <!--------------- google fonts ----------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ------------custom styleshit---------- -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+</head>
+<body class="home">
+  <a href="#main-content" class="skip-to-content">Skip To Content</a>
+  <header class="flex primary-header" style="--gap:0">
+    <div class="logo-container">
+      <img class="primary-logo" src="./assets/shared/logo.svg" alt="space travel logo">
+    </div>
+    <button class ="navbar-toggle-mobile" aria-controls="primary-navbar">
+      <!-- <img src="./assets/shared/icon-hamburger.svg" alt="" class="hamburger-icon"> -->
+      <!-- <img src="./assets/shared/icon-close.svg" alt=""> -->
+      <span class="sr-only">menu</span>
+    </button>
+    <div class="flex-auto">
+      <nav class="navbar-container">
+        <ul id="primary-navbar" class="flex primary-navbar underline-indicators" data-navbar>
+          <li aria-selected="true"><a href="home.html" class="uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">00</span>Home</a></li>
+          <li><a href="destination.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">01</span>Destination</a></li>
+          <li><a href="crew.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">02</span>Crew</a></li>
+          <li><a href="technology.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">03</span>Technology</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <div id ="main-content" class="grid-container grid-container--home">
+    <div class="">
+      <P class="bellefair-serif uppercase letter-spacing-1">
+        So, you want to travel to <br>
+        <span class="fs-900 bellefair-serif uppercase">space</span>
+      </p>
+      <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+        Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!
+      </p>
+    </div>
+  
+    <div>
+      <!-- explore button -->
+      <a
+        href="destination.html"
+        class="
+          large-button
+          bg-white
+          text-dark
+          uppercase
+          bellefair-serif
+          fs-600
+        "
+        >Explore</a
+      >
+    </div>
+  </div>
+</body>
+
+</html>

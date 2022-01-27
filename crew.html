@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism Moon</title>
+
+  <!--------------- google fonts ----------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ------------custom styleshit---------- -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="crew.js" defer></script>
+</head>
+<body class="crew">
+  <a href="#main-content" class="skip-to-content">Skip To Content</a>
+  <header class="flex primary-header" style="--gap:0">
+    <div class="logo-container">
+      <img class="primary-logo" src="./assets/shared/logo.svg" alt="space travel logo">
+    </div>
+    <button class ="navbar-toggle-mobile" aria-controls="primary-navbar">
+      <!-- instead of bringing in images here, we will use background images to bring the images in in css -->
+      <span class="sr-only">menu</span>
+    </button>
+    <div class="flex-auto">
+      <nav class="navbar-container">
+        <ul id="primary-navbar" class="flex primary-navbar underline-indicators" data-navbar>
+          <li><a href="home.html" class="uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">00</span>Home</a></li>
+          <li><a href="destination.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">01</span>Destination</a></li>
+          <li aria-selected="true"><a href="crew.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">02</span>Crew</a></li>
+          <li><a href="technology.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">03</span>Technology</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div role="main" id ="main-content" class="grid-container grid-container--crew">
+    <div>
+      <h1 class="destination-title bellefair-serif uppercase letter-spacing-1 numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
+    </div>
+    
+    <div>
+      <!-- the commander -->
+      <article data-content id="commander" tabindex="0" role="tabpanel">
+        <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">Commander <br>
+          <span class="crew-name">Douglas Hurley</span>
+        </p>
+        <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+          Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+          and former NASA astronaut. He launched into space for the third time as 
+          commander of Crew Dragon Demo-2.
+        </p>
+      </article>
+
+      <!-- Mark shuttleworth -->
+      <article data-content id="mission-specialist" hidden tabindex="0" role="tabpanel">
+        <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">Mission Specialist<br>
+          <span class="crew-name">Mark Shuttleworth</span>
+        </p>
+        <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+          the Linux-based Ubuntu operating system. Shuttleworth became the first South 
+          African to travel to space as a space tourist.
+        </p>
+      </article>
+
+      <!-- pilot victor -->
+      <article data-content id="pilot" hidden tabindex="0" role="tabpanel">
+        <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">Pilot<br>
+          <span class="crew-name">Victor Glover</span>
+        </p>
+        <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+          International Space Station. Glover is a commander in the U.S. Navy where 
+          he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
+          station systems flight engineer.
+        </p>
+      </article>
+
+      <!-- Flight Engineer -->
+      <article data-content id="crew-Engineer" hidden tabindex="0" role="tabpanel">
+        <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">Flight Engineer<br>
+          <span class="crew-name">Anousheh Ansari</span>
+        </p>
+        <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+          Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+          Ansari was the fourth self-funded space tourist, the first self-funded woman to 
+          fly to the ISS, and the first Iranian in space.
+        </p>
+      </article>
+    </div>
+    <!-- dot indicators -->
+    <div>
+      <div data-dotIndicatorsTab role="tablist" aria-label="crew members list" class="dot-indicators flex">
+        <button data-dotIndicator role="tab" aria-selected="true" tabindex="0" aria-controls="commander"><span class="sr-only">The Commander</span></button>
+        <button data-dotIndicator role="tab" aria-selected="false" tabindex="-1" aria-controls="mission-specialist"><span class="sr-only">The mission specialist</span></button>
+        <button data-dotIndicator role="tab" aria-selected="false" tabindex="-1" aria-controls="pilot"><span class="sr-only">The Pilot</span></button>
+        <button data-dotIndicator role="tab" aria-selected="false" tabindex="-1" aria-controls="crew-Engineer"><span class="sr-only">The crew Engineer</span></button>
+      </div>
+    </div>
+    <!-- images of crew -->
+    <div>
+      <!-- douglas -->
+      <div>
+        <picture data-image id="commander">
+          <source srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
+          <img src="./assets/crew/image-douglas-hurley.png" alt="Crew- Douglas Hurley">
+        </picture>
+      </div>
+      <!-- mark shuttleworth -->
+      <div>
+        <picture data-image hidden id="mission-specialist">
+          <source srcset="./assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+          <img src="./assets/crew/image-mark-shuttleworth.png" alt="Crew- Mark Shuttleworth">
+        </picture>
+      </div>
+      <!-- vitor glover -->
+      <div>
+        <picture data-image hidden id="pilot">
+          <source srcset="./assets/crew/image-victor-glover.webp" type="image/webp">
+          <img src="./assets/crew/image-victor-glover.png" alt="Crew- Victor Glover">
+        </picture>
+      </div>
+      <!-- Anousheh ansari -->
+      <div>
+        <picture data-image hidden id="crew-Engineer">
+          <source srcset="./assets/crew/image-anousheh-ansari.webp" type="image/webp">
+          <img src="./assets/crew/image-anousheh-ansari.png" alt="Crew- Anousheh ansari">
+        </picture>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

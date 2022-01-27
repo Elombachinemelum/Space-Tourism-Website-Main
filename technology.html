@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <!--------------- google fonts ----------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ------------custom styleshit---------- -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- script files.. -->
+  <script src="technology.js" defer></script>
+</head>
+<body class="technology">
+  <a href="#main-content" class="skip-to-content">Skip To Content</a>
+  <header class="flex primary-header" style="--gap:0">
+    <div class="logo-container">
+      <img class="primary-logo" src="./assets/shared/logo.svg" alt="space travel logo">
+    </div>
+    <button class ="navbar-toggle-mobile" aria-controls="primary-navbar">
+      <!-- <img src="./assets/shared/icon-hamburger.svg" alt="" class="hamburger-icon"> -->
+      <!-- <img src="./assets/shared/icon-close.svg" alt=""> -->
+      <span class="sr-only">menu</span>
+    </button>
+    <div class="flex-auto">
+      <nav class="navbar-container">
+        <ul id="primary-navbar" class="flex primary-navbar underline-indicators" data-navbar>
+          <li><a href="home.html" class="uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">00</span>Home</a></li>
+          <li><a href="destination.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">01</span>Destination</a></li>
+          <li><a href="crew.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">02</span>Crew</a></li>
+          <li aria-selected="true"><a href="technology.html" class="barlow-condensed uppercase letter-spacing-2 text-white numbered-title"><span aria-hidden="true">03</span>Technology</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div role="main" id ="main-content" class="grid-container--technology">
+    <!-- article section -->
+    <h1 class="destination-title bellefair-serif uppercase letter-spacing-1 numbered-title technology-title"><span aria-hidden="true">03</span>Space launch 101</h1>
+    <div class="technology-content">
+      <div class="flex side-flex">
+        <div class="circle-indicators flow" data-indicatorTab role="tablist" tabindex="0">
+          <button aria-selected="true" data-indicator tabindex="0" role="tab" aria-controls="vehicle-tab" class="bg-dark text-white">1</button>
+          <button aria-selected="false" data-indicator tabindex="-1" role="tab" aria-controls="spacesport-tab" class="bg-dark text-white">2</button>
+          <button aria-selected="false" data-indicator tabindex="-1" role="tab" aria-controls="capsule-tab" class="bg-dark text-white">3</button>
+        </div>
+        <div>
+          <!-- vehicle tab-->
+          <article data-content id="vehicle-tab" tabindex="0" role="tabpanel">
+            <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">The terminology...<br>
+              <span class="crew-name">Launch vehicle</span>
+            </p>
+            <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+              A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+              payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+              WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+              it's quite an awe-inspiring sight on the launch pad!
+            </p>
+          </article>
+          <!-- spacesport tab-->
+          <article hidden data-content id="spacesport-tab" tabindex="0" role="tabpanel">
+            <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">The terminology...<br>
+              <span class="crew-name">Spaceport</span>
+            </p>
+            <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+              A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+              by analogy to the seaport for ships or airport for aircraft. Based in the 
+              famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+              of the Earth’s rotation for launch.
+            </p>
+          </article>
+          <!-- spacecapsule tab -->
+          <article data-content hidden id="capsule-tab" tabindex="0" role="tabpanel">
+            <p class="crew-paragraph bellefair-serif uppercase letter-spacing-1 fs-400">The terminology...<br>
+              <span class="crew-name">Space capsule</span>
+            </p>
+            <p class="barlow-sans-serif uppercase content-text letter-spacing-1">
+              A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+              capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+              you'll spend your time during the flight. It includes a space gym, cinema, 
+              and plenty of other activities to keep you entertained.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- image section -->
+    <div class="image-technology">
+      <!-- launch vehicle image -->
+      <picture data-image id="vehicle-tab">
+        <source media="(max-width: 50em)" srcset="./assets/technology/image-launch-vehicle-landscape.jpg" type="image/jpg">
+        <img src="./assets/technology/image-launch-vehicle-portrait.jpg" class="" alt="launch vehicle">
+      </picture>
+      <!-- spacesport image -->
+      <picture data-image hidden id="spacesport-tab">
+        <source media="(max-width: 50em)" srcset="./assets/technology/image-spaceport-landscape.jpg" type="image/jpg">
+        <img src="./assets/technology/image-spaceport-portrait.jpg" class="" alt="launch vehicle">
+      </picture>
+      <!-- space capsule image -->
+      <picture data-image hidden id="capsule-tab">
+        <source media="(max-width: 50em)" srcset="./assets/technology/image-space-capsule-landscape.jpg" type="image/jpg">
+        <img src="./assets/technology/image-space-capsule-portrait.jpg" class="" alt="launch vehicle">
+      </picture>
+    </div>
+  </div>
+</body>
+</html>
