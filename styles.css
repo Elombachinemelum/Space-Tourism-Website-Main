@@ -119,6 +119,14 @@ body{
         background-image: url(./assets/home/background-home-tablet.jpg);
         background-position: center;
     }
+    .home, .crew, .technology{
+        padding-block-end: 10em;
+    }
+
+    .home-content p .article-name{
+        font-size: calc(5vw + 2.3rem);
+    }
+
     .crew{
         background-image: url(./assets/crew/background-crew-tablet.jpg);
     }
@@ -589,7 +597,7 @@ select{
 
 /* this naming convention shows that we modified the grid-container class above */
 .grid-container--home{
-    padding-top: 12%
+    padding-top: 4%
 }
 
 .mini-flex-container p {
@@ -992,18 +1000,22 @@ select{
     margin:2% 0 10%;
 }
 /****************************** crew section **********************************/
-.crew-name{
+.article-name{
     font-size: clamp(1.2rem, 2.5vw, 3.5rem);
     color: hsl(var(--clr-white));
 }
 
-.crew-paragraph{
-    line-height: 1.5;
+.article-paragraph{
+    line-height: 1.8;
     color: hsl(var(--clr-white)/.6);
 }
 
-.crew-paragraph + p{
+.article-paragraph + p{
     color: hsl(var(--clr-white)/.7);
+}
+
+.home-content .article-name{
+    font-size: calc(5vw + 2rem);
 }
 /****************************** crew section **********************************/
 
