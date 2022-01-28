@@ -274,10 +274,14 @@ body{
     }
     .grid-container--crew div picture{
         grid-area: image;
-        max-width: 70%;
-        border-bottom: 2px solid hsl(var(--clr-white)/.15);
-        
+        max-width: 100%;
     }
+
+    .grid-container--crew div picture img{
+        max-width: 75%;
+        border-bottom: 2px solid hsl(var(--clr-white)/.15);
+    }
+    
     .grid-container--crew .dot-indicators{
         justify-content: space-between;
         --gap: clamp(.5rem, 4vw, 3rem);
@@ -1102,9 +1106,9 @@ select{
 
 @media (max-width: 800px) {
     .grid-container{
-        /* column-gap: var(--container-gap, 2rem); */
         position: relative;
-        grid-template-columns: minmax(0, 1rem) minmax(0, 1fr) minmax(0, 1rem);
+        /* grid-template-columns: minmax(0, 1rem) minmax(0, 1fr) minmax(0, 1rem); */
+        grid-template-columns: minmax(0, .6rem) minmax(0, 1fr) minmax(0, .6rem);
         text-align: center;
         padding: 0;
         padding: 0 1% 8%;
