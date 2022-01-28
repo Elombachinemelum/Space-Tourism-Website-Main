@@ -278,7 +278,7 @@ body{
     }
 
     .grid-container--crew div picture img{
-        max-width: 75%;
+        max-width: 90%;
         border-bottom: 2px solid hsl(var(--clr-white)/.15);
     }
     
@@ -310,7 +310,7 @@ body{
 
     [role].grid-container--technology{
         display: grid;
-        grid-template-columns: minmax(1rem, 1fr) minmax(0, 48rem)  minmax(1rem, 1fr);
+        grid-template-columns: minmax(1.5rem, 1fr) minmax(0, 48rem)  minmax(1.5rem, 1fr);
         row-gap: 5%;
         justify-items: center;
         padding-bottom: 25%;
@@ -1108,7 +1108,7 @@ select{
     .grid-container{
         position: relative;
         /* grid-template-columns: minmax(0, 1rem) minmax(0, 1fr) minmax(0, 1rem); */
-        grid-template-columns: minmax(0, .6rem) minmax(0, 1fr) minmax(0, .6rem);
+        grid-template-columns: minmax(0, .2rem) minmax(0, 1fr) minmax(0, .2rem);
         text-align: center;
         padding: 0;
         padding: 0 1% 8%;
