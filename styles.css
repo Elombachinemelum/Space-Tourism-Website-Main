@@ -107,7 +107,6 @@ body{
          --fs-600: 1.8rem;
          --fs-400: 1rem;
          --fs-500: 1.25rem;
-
     }
 
     .mini-flex-container span{
@@ -187,15 +186,15 @@ body{
         position: fixed;  /*using the absolute position would work but it allows the menu to scroll*/
         cursor: pointer;
         z-index: 6;
-        right: 8%;
-        top: 4%;
+        right: 6%; /*was 8% before*/
+        top: 3%; /*was 4% before*/
         border: 0;
         background: none; /*background-color: transparent; will have the same effect*/
         background-image: url(./assets/shared/icon-hamburger.svg);
         background-size: cover;
-        /*width: 1.5rem;*/  /*we can have this and then the aspect-ration: with no need to use scaling to make it bigger*/
+        width: 1.6rem;
         aspect-ratio: 1;
-        transform: scale(2.2, 2);
+        /*transform: scale(2.2, 2);*/ /*we can have this and take off the width property and stil get a perfect square which we scale to size*/
     }
 
     button.dissmiss{
